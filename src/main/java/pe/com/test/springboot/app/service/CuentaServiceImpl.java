@@ -71,4 +71,10 @@ public class CuentaServiceImpl implements CuentaService {
 		return cuentaRepository.save(save);
 	}
 
+	@Override
+	@Transactional
+	public void deleteById(Long id) {
+		cuentaRepository.deleteById(id);
+	}
+
 }
